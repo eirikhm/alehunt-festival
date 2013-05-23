@@ -1,0 +1,32 @@
+<header class="bar-title">
+    <a class="button-prev">
+        Tilbake
+    </a>
+    <h1 class="title" style="padding-left: 25px;">{beer.title}</h1>
+</header>
+
+<div class="content">
+    <div class="content-padded">
+        <p>
+            {^beer.description}
+                Ingen beskrivelse tilgjengelig.
+            {/beer.description}
+
+            {?beer.description}
+                {beer.description}
+            {/beer.description}
+        </p>
+
+        <br/>
+
+        <p>
+            {beer.abv}% {beer.style}
+        </p>
+
+        <br/>
+
+        <p>
+            Bryggeri: {beer.brewery}
+        </p>
+    </div>
+</div>

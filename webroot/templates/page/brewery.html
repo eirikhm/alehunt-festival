@@ -1,0 +1,38 @@
+<header class="bar-title">
+    <a class="button-prev">
+        Tilbake
+    </a>
+    <h1 class="title" style="padding-left: 25px;">{brewery.title}</h1>
+    <a class="button more">
+        Info
+    </a>
+</header>
+
+<div class="content beer-list">
+    <div class="content-padded">
+        <p>{brewery.title} stiller med {brewery.beer_count} øl.</p>
+    </div>
+    <ul class="list inset">
+        {#beers}
+        <li class="beer" data-id="{id}">
+            <a>
+                <strong>{title}</strong><br/>
+                {abv}% {style}
+                <span class="chevron"></span>
+            </a>
+        </li>
+        {/beers}
+    </ul>
+</div>
+
+<div class="content info" style="display: none;">
+    <div class="content-padded" style="text-align: justify;">
+        {^brewery.description}
+            Ingen beskrivelse tilgjengelig.
+        {/brewery.description}
+
+        {?brewery.description}
+            {brewery.description}
+        {/brewery.description}
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div>
+    <header class="bar-title">
+        <h1 class="title">Haand 2013 - AleHunt</h1>
+        <a class="button refresh">
+            <i class="icon-refresh"></i>
+
+        </a>
+    </header>
+
+
+    <div class="content">
+        <div class="content-padded">
+            <p class="welcome">Uoffisiell festival-app! Testversjon, flere funksjoner vil komme!</p>
+        </div>
+
+        <ul class="list inset">
+            {#breweries}
+            <li class="brewery" data-id="{id}">
+                <a >
+                    <strong>{title}</strong>
+                    <span class="chevron"></span>
+                    <span class="count">{beer_count}</span>
+                </a>
+            </li>
+            {/breweries}
+        </ul>
+    </div>
+</div>
